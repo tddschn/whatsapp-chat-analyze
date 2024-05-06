@@ -101,7 +101,8 @@ def plot_count_plots(
     plotly: bool = False,
 ):
     title_suffix = " | Made by Teddy (teddysc.me)"
-    title_prefix = f"{chat_name} |" if chat_name else ""
+    title_prefix = f"{chat_name} | " if chat_name else ""
+
     import matplotlib.pyplot as plt
 
     if plot_type == "message_count":
