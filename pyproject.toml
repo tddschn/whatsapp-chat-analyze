@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "whatsapp-chat-analyze"
+version = "0.1.0"
+description = "Ingest and analyze WhatsApp chat data, and plot beautiful visualizations."
+authors = ["Teddy Xinyuan Chen <45612704+tddschn@users.noreply.github.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/tddschn/whatsapp-chat-analyze"
+repository = "https://github.com/tddschn/whatsapp-chat-analyze"
+classifiers = ["Topic :: Utilities"]
+keywords = ["cli", 'utility', 'whatsapp', 'chat', 'analyze', 'visualization']
+[tool.poetry.scripts]
+whatsapp-chat-analyze = "whatsapp_chat_analyze.cli:main"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/tddschn/whatsapp-chat-analyze/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <4.0"
+pandas = "^2.2.2"
+matplotlib = "^3.8.4"
+seaborn = "^0.13.2"
+plotly = "^5.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
