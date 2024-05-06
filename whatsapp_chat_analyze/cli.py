@@ -38,9 +38,9 @@ def get_args():
         default="whatsapp-chat",
     )
 
-    parser.add_argument(
-        "-p", "--plotly", help="Use Plotly for interactive plots", action="store_true"
-    )
+    # parser.add_argument(
+    #     "-p", "--plotly", help="Use Plotly for interactive plots", action="store_true"
+    # )
 
     parser.add_argument(
         "-d", "--by-day-only", help="Plot messages per day only", action="store_true"
@@ -140,6 +140,7 @@ def plot_count_plots(
 
 
 def plot_by_date(df, output_base_name: str, chat_name: str | None = None):
+    print(f'Plotting "Messages per Day" and "Messages per Day by Author"')  # type: ignore
     title_suffix = " | Made by Teddy (teddysc.me)"
     title_prefix = f"{chat_name} |" if chat_name else ""
     import plotly.express as px
@@ -224,6 +225,11 @@ def plot_by_date(df, output_base_name: str, chat_name: str | None = None):
 
 def main():
     args = get_args()
+    # surpress warnings
+    import warnings
+
+    warnings.filterwarnings("ignore")
+
     # if args.file.suffix == '.zip', unzip it into a secure temp dir, and find the only .txt file in it, print its path and set it to args.file
 
     if args.file.suffix == ".zip":
@@ -258,7 +264,8 @@ def main():
             finally:
                 pass
 
-    pcp_extra_args = {"plotly": args.plotly}
+    # pcp_extra_args = {"plotly": args.plotly}
+    pcp_extra_args = {"plotly": True}
     common_args = {}
     if args.chat_name:
         common_args["chat_name"] = args.chat_name
