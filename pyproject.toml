@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "whatsapp-chat-analyze"
-version = "0.1.0"
+version = "0.1.1"
 description = "Ingest and analyze WhatsApp chat data, and plot beautiful visualizations."
 authors = ["Teddy Xinyuan Chen <45612704+tddschn@users.noreply.github.com>"]
 readme = "README.md"
