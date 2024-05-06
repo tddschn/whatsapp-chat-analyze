@@ -7,17 +7,21 @@ Purpose: Analyze Whatsapp Exported _chat.txt
 
 import argparse
 from pathlib import Path
+from whatsapp_chat_analyze import __version__
 
 
 def get_args():
     """Get command-line arguments"""
     parser = argparse.ArgumentParser(
-        description="Analyze Whatsapp Exported _chat.txt",
+        description="Analyze Whatsapp Exported .txt or .zip (will be automatically extracted) chat file",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
 
     parser.add_argument(
-        "file", type=Path, metavar="file", help="Chat file (_chat.txt) to analyze"
+        "file",
+        type=Path,
+        metavar="file",
+        help="Chat file (_chat.txt or *.zip) to analyze",
     )
 
     parser.add_argument(
