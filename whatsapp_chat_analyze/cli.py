@@ -58,6 +58,13 @@ def get_args():
         "-c", "--to-csv-only", help="Convert chat to csv and exit", action="store_true"
     )
 
+    parser.add_argument(
+        "-a",
+        "--anonymize",
+        help="Anonymize the chat by replacing author names with generic names",
+        action="store_true",
+    )
+
     return parser.parse_args()
 
 
@@ -265,6 +272,13 @@ def main():
                     df.to_csv(args.file.with_suffix(".csv"), index=False)
                     print(f'Chat saved as "{args.file.with_suffix(".csv")}"')
                     return
+                if args.anonymize:
+                    # replace every name with a, b, ... z, aa, ab, ...
+                    import string
+
+                    authors = df["Author"].unique()
+                    author_map = dict(zip(authors, string.ascii_uppercase))
+                    df["Author"] = df["Author"].map(author_map)
             finally:
                 pass
 
