@@ -65,6 +65,13 @@ def get_args():
         action="store_true",
     )
 
+    parser.add_argument(
+        "-V",
+        "--version",
+        action="version",
+        version=f"%(prog)s {__version__}",
+    )
+
     return parser.parse_args()
 
 
