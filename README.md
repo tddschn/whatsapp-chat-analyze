@@ -10,6 +10,7 @@ Command line tool to analyze WhatsApp exported chat data (accepts .txt and .zip)
     - [pip](#pip)
   - [Usage](#usage)
   - [Develop](#develop)
+  - [Limitations](#limitations)
 
 ## Demo
 
@@ -76,3 +77,7 @@ $ git clone https://github.com/tddschn/whatsapp-chat-analyze.git
 $ cd whatsapp-chat-analyze
 $ poetry install
 ```
+
+## Limitations
+
+- Parsing of chat data uses simple regex, and author names in non-latin languages may not be parsed correctly
