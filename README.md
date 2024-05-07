@@ -24,6 +24,7 @@ For more plots and interactity, check out the blog post: https://teddysc.me/blog
 - Export to csv (`-c`)
 - Pretty interactive charts with plotly and save them to HTML files
 - 6 different plots, see [demo](#demo)
+- Anonymize sender names to `A`, `B`, `C`, etc. (`-a`)
 
 ## Installation
 
