@@ -13,12 +13,21 @@ Command line tool to analyze WhatsApp exported chat data (accepts .txt and .zip)
 
 ## Demo
 
+![](https://github.com/cli/cli/assets/45612704/08026ab5-24c0-4ec1-8afe-903d57654e15)
+
+For more plots and interactity, check out the blog post: https://teddysc.me/blog/whatsapp-chat-analyze .
+
 ## Features
 
+- Simple to install and use, no cloning involved, supports modern Python versions 
 - Extracts chat data from .txt or .zip files
 - Export to csv (`-c`)
+- Pretty interactive charts with plotly and save them to HTML files
+- 6 different plots, see [demo](#demo)
 
 ## Installation
+
+Python>=3.10 required.
 
 ### pipx
 
